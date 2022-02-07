@@ -1,7 +1,7 @@
 import {Distcalcmethods} from "https://deno.land/x/distance_calculator@2.0.0/mod.ts"
 
 export class DBScan{
-    getclassifiedPointListEuclidean(inputlist:Array<number[]>, threshold:number, k:number){
+    public getclassifiedPointListEuclidean(inputlist:Array<number[]>, threshold:number, k:number){
         var outputcore:Array<number[]>=[]
         var outputborder:Array<number[]>=[]
         var outputnoise:Array<number[]>=[]
@@ -35,7 +35,7 @@ export class DBScan{
         }
         return [outputcore, outputborder, outputnoise]
     }
-    getclassifiedPointListManhattan(inputlist:Array<number[]>, threshold:number, k:number){
+    public getclassifiedPointListManhattan(inputlist:Array<number[]>, threshold:number, k:number){
         var outputcore:Array<number[]>=[]
         var outputborder:Array<number[]>=[]
         var outputnoise:Array<number[]>=[]
@@ -69,7 +69,7 @@ export class DBScan{
         }
         return [outputcore, outputborder, outputnoise]
     }
-    getclassifiedPointListMinkowski(inputlist:Array<number[]>, threshold:number, k:number, p:number){
+    public getclassifiedPointListMinkowski(inputlist:Array<number[]>, threshold:number, k:number, p:number){
         var outputcore:Array<number[]>=[]
         var outputborder:Array<number[]>=[]
         var outputnoise:Array<number[]>=[]
